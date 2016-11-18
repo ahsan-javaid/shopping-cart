@@ -12,10 +12,12 @@ module.exports = function(app) {
 			description: faker.lorem.sentence()
 		});
 	}
+	// Get all products
 	app.get("/product",function(req,res){
-		res.set('code', '200');
 		res.send({code:200,status:"success",response:products});
-	})
+	});
+
+	//Get single product by id
 	app.get("/product/:id",function(req,res){
 		var product;
 		for(var i=0;i<products.length;i++){
@@ -35,6 +37,7 @@ module.exports = function(app) {
 		})
 	})
 
+	//Get product cart
 	app.get("/cart",function(req,res){
 		Product.find({},function(err,data){
 			if(err){
@@ -43,7 +46,9 @@ module.exports = function(app) {
 				res.send({code:200,status:"success",response:data});
 			}
 		})
-	})
+	});
+
+	//Add product in cart
 	app.post("/cart",function(req,res){
 		Product.create(req.body,function(err,data){
 			if(err){
@@ -57,7 +62,9 @@ module.exports = function(app) {
 				res.send({code:200,status:"success",message:"Product Added in Cart",response:data});
 			}
 		})
-	})
+	});
+
+	//Remove product from cart
 	app.delete("/cart/:id",function(req,res){
 		Product.findOne({id:req.params.id},function(err,pro){
 			if(err){
@@ -76,6 +83,7 @@ module.exports = function(app) {
 		})
 	})
 
+	//Purchase products
 	app.delete("/checkout",function(req,res){
 		Product.remove({},function(err,data){
 			if(err){
@@ -86,7 +94,7 @@ module.exports = function(app) {
 		})
 	})
 
-
+	//Return index file to browser
 	app.get('*', function(req, res) {
 		res.sendfile('./public/index.html');
 	});

@@ -43252,8 +43252,7 @@
 	        getProducts: function (success, error)
 	        {
 	            $http.get('/product').
-	                success(function (data,status,headers) {
-	                    console.log("s",arguments,"s")
+	                success(function (data) {
 	                    success(data);
 	                }).
 	                error(function (data) {

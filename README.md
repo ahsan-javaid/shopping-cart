@@ -1,20 +1,27 @@
 # Shopping Cart
 
-This is a repo for a starter appliation for a Single Page MEAN Stack application. Just download and install and you have a good foundation for building application. 
+Mini online shopping cart application developed using: javascript, node, express, angular, mongodb, webpack
+
+##Features
+1. View products
+2. View product details
+3. Add/remove product from cart
+4. Rest API's
+
+
 
 ## Installation
 1. Download the repository
-2. Install npm modules: `npm install`
-3. Install bower dependencies `bower install`
-4. Start up the server: `node server.js`
-5. View in browser at http://localhost:8080
+2  Go to the project main directory
+3. Install npm modules: `npm install`
+4. Install bower dependencies `bower install`
+5. Install webpack globaly `npm install -g webpack`
+6. Install and run mongodb on your system
+7. Run the command `webpack` to generate javascript bundle
+8. Start up the server: `node server.js`
+9. View in browser at http://localhost:8080
 
-Use this starter kit to build any MEAN stack application you like.
 
-If you have any questions or requests, email us at [chris@scotch.io](mailto:chris@scotch.io) and we'll keep updating this to make it perfect.
 
-## Future Additions
-- CRUD examples
-- Development and Production Environments
-- Link examples
-- Single Page AngularJS Animations
+If you have any questions or difficulties in running this application, email me at ahsan.javaid.cs@gmail.com
+

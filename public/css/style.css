@@ -1,4 +1,10 @@
-body { padding-top:30px; }
+
 .product-image{
     height: 120px;
+}
+
+
+.logo-image{
+    height: 120px;
+    padding-left:10px ;
 }
