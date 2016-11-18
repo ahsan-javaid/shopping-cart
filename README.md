@@ -8,7 +8,7 @@ https://online-shopping-cart.herokuapp.com
 
 ## Installation
 1. Download the repository
-2  Go to the project main directory
+2.  Go to the project main directory
 3. Install npm modules: `npm install`
 4. Install bower dependencies `bower install`
 5. Install webpack globaly `npm install -g webpack`
