@@ -29,8 +29,4 @@ angular.module('ProductDetailCtrl', []).controller('ProductDetailController', fu
         }, function (err) {
         });
     }
-
-
-
-
 });
