@@ -2,6 +2,10 @@
 
 Mini online shopping cart application developed using: javascript, node, express, angular, mongodb, webpack
 
+##Live Demo
+https://online-shopping-cart.herokuapp.com
+
+
 ##Features
 1. View products
 2. View product details
