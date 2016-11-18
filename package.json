@@ -14,5 +14,8 @@
   "scripts": {
     "start": "node app.js",
     "postinstall": "./node_modules/bower/bin/bower --allow-root install"
+  },
+  "engines": {
+    "node": "5.11.0"
   }
 }
