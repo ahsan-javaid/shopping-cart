@@ -14,6 +14,8 @@ module.exports = function(app) {
 	}
 	// Get all products
 	app.get("/product",function(req,res){
+		res.header('code', '200');
+		res.header('status', 'success');
 		res.send({code:200,status:"success",response:products});
 	});
 
@@ -28,9 +30,13 @@ module.exports = function(app) {
 		}
 		Product.findOne({id:req.params.id},function(err,data){
 			if(err){
+				res.header('code', '500');
+				res.header('status', 'error');
 				res.send({code:500,status:"error",response:{}});
 			}else{
 				var inCart= data?true:false;
+				res.header('code', '200');
+				res.header('status', 'success');
 				res.send({code:200,status:"success",response:{product:product?product:data,inCart:inCart }})
 			}
 
@@ -43,6 +49,8 @@ module.exports = function(app) {
 			if(err){
 				res.send({code:500,status:"error",response:{}});
 			}else{
+				res.header('code', '200');
+				res.header('status', 'success');
 				res.send({code:200,status:"success",response:data});
 			}
 		})
@@ -59,6 +67,8 @@ module.exports = function(app) {
 						products.splice(i,1);
 					}
 				}
+				res.header('code', '200');
+				res.header('status', 'success');
 				res.send({code:200,status:"success",message:"Product Added in Cart",response:data});
 			}
 		})
@@ -76,6 +86,8 @@ module.exports = function(app) {
 
 					}else{
 						products.push(pro);
+						res.header('code', '200');
+						res.header('status', 'success');
 						res.send({code:200,status:"success",message:"Product Removed",response:data});
 					}
 				})
@@ -89,6 +101,8 @@ module.exports = function(app) {
 			if(err){
 				res.send({code:500,status:"error",response:{}});
 			}else{
+				res.header('code', '200');
+				res.header('status', 'success');
 				res.send({code:200,status:"success",message:"Successfully Purchased",response:data});
 			}
 		})

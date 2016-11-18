@@ -5,8 +5,8 @@ var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
 var port = process.env.PORT || 8080; // set our port
 
-//mongoose.connect("mongodb://localhost/productDb");
-mongoose.connect("mongodb://root:root@ds157487.mlab.com:57487/product-db");
+mongoose.connect("mongodb://localhost/productDb");
+//mongoose.connect("mongodb://root:root@ds157487.mlab.com:57487/product-db");
 
 
 
@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // parse application/x-www-f
 var allowCrossDomain = function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, companyID,userID');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 
     if (req.method == 'OPTIONS') {
         res.send(200);
