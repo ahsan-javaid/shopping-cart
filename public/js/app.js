@@ -1,0 +1,1 @@
+angular.module('shoppingCartApp', ['ngRoute', 'appRoutes', 'ProductDetailCtrl', 'ProductCtrl', 'ProductService', 'CartCtrl']);

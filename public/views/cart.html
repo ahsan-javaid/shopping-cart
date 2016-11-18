@@ -1,0 +1,47 @@
+<div class="row" >
+    <h1>
+        <a href="/">view products</a>
+    </h1>
+    <h1 ng-show="products.length">
+        <a href="" ng-click="checkout()">checkout</a>
+    </h1>
+</div>
+<div class="row text-center">
+
+    <h1 ng-hide="products.length">
+        No product in Cart
+    </h1>
+</div>
+
+<div class="row" ng-show="msg">
+    <div class="alert alert-success">
+        <strong>Success!</strong> {{msg}}
+    </div>
+
+</div>
+<table class="table"  ng-show="products.length">
+    <thead>
+    <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th></th>
+        <th></th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="product in products">
+        <td><img src="{{product.image}}" class="product-image" /></td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>
+            <button type="button" class="btn btn-primary btn-sm" ng-click="removeFromCart(product,$index)">Remove from cart</button>
+        </td>
+        <td>
+            <button type="button" class="btn btn-primary btn-sm" ng-click="viewDetail(product.id)">View Detail</button>
+        </td>
+
+    </tr>
+    </tbody>
+</table>

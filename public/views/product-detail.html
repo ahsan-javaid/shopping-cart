@@ -1,0 +1,44 @@
+<div class="row" >
+    <h2>
+        <a href="/cart">view cart</a>
+    </h2>
+
+</div>
+<div class="row">
+    <div ng-show="inCart">
+        <a href="" ng-click="removeFromCart()">remove from cart</a>
+
+    </div>
+    <div ng-hide="inCart">
+        <a href="" ng-click="addToCart()">add to cart</a>
+    </div>
+</div>
+<div class="row" ng-show="msg">
+    <div class="alert alert-success">
+        <strong>Success!</strong> {{msg}}
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Product Name: {{product.name}}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h1>Product Price: {{product.price}}</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <img src="{{product.image}}"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h3>Product Description</h3>
+        <p>{{product.description}}</p>
+    </div>
+</div>

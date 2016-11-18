@@ -1,0 +1,37 @@
+<div class="row" >
+    <h2>
+        <a href="/cart">view cart</a>
+    </h2>
+
+</div>
+<div class="row" ng-show="msg">
+    <div class="alert alert-success">
+        <strong>Success!</strong> {{msg}}
+    </div>
+
+</div>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th></th>
+        <th></th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="product in products">
+        <td><img src="{{product.image}}" class="product-image" /></td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>
+            <button type="button" class="btn btn-primary btn-sm" ng-click="addToCart(product,$index)">Add To Cart</button>
+        </td>
+        <td>
+            <button type="button" class="btn btn-primary btn-sm" ng-click="viewDetail(product.id)">View Detail</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
