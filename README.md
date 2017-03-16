@@ -24,6 +24,3 @@ https://online-shopping-cart.herokuapp.com
 3. Add/remove product from cart
 4. Rest API's
 
-
-If you have any questions or difficulties in running this application, email me at ahsan.javaid.cs@gmail.com
-
